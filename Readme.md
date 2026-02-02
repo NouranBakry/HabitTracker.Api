@@ -58,6 +58,7 @@ Count total completions per habit
 Ready for streak logic and reporting extensions
 
 🗄 Database Design
+
 Entity Description
 User Represents application users
 Habit User-defined habits
@@ -70,7 +71,7 @@ One User → Many Habits
 One Habit → Many HabitEntries
 
 🛠 Tech Stack
-Area Technology
+
 Language C#
 Framework ASP.NET Core Web API
 ORM Entity Framework Core
@@ -78,6 +79,8 @@ Database SQL Server (Azure SQL compatible)
 API Style RESTful
 Architecture Clean layered architecture
 DevOps Ready Docker & Azure deployable
+
+
 📌 Example Endpoints
 Method Endpoint Description
 POST /api/users Create user
@@ -96,7 +99,7 @@ Azure DevOps CI/CD
 
 Containerization via Docker
 
-🔮 Planned Enhancements
+Planned Enhancements:
 
 JWT Authentication
 
