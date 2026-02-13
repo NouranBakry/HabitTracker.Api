@@ -1,6 +1,6 @@
 namespace HabitTracker.Domain.Entities;
 
-public class HabitLog
+public class HabitEntry
 {
     public Guid Id { get; set; }
     public DateTime Date { get; set; }

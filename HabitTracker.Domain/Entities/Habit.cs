@@ -4,10 +4,21 @@ public class Habit
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
-    public string? Description { get; set; }
 
-    public Guid UserId { get; set; }
-    public User User { get; set; } = null!;
+    public int FrequencyPerWeek { get; set; }
 
-    public List<HabitLog> Logs { get; set; } = new();
+    public DateTime CreatedAt { get; set; }
+
+    private Habit() { }
+
+    public static Habit Create(string name, int frequencyPerWeek)
+    {
+        return new Habit
+        {
+            Id = Guid.NewGuid(),
+            Name = name,
+            FrequencyPerWeek = frequencyPerWeek,
+            CreatedAt = DateTime.UtcNow
+        };
+    }
 }

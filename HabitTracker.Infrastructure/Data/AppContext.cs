@@ -9,7 +9,7 @@ public class AppDbContext : DbContext
 
     public DbSet<User> Users => Set<User>();
     public DbSet<Habit> Habits => Set<Habit>();
-    public DbSet<HabitLog> HabitLogs => Set<HabitLog>();
+    public DbSet<HabitEntry> HabitEntries => Set<HabitEntry>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
