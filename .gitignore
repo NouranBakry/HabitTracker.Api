@@ -1,0 +1,10 @@
+/bin
+/obj
+/.vs
+/*.user
+/HabitTracker.Api/bin
+/HabitTracker.Api/obj
+/HabitTracker.Infrastructure/bin
+/HabitTracker.Infrastructure/obj
+/HabitTracker.Domain/bin
+/HabitTracker.Domain/obj

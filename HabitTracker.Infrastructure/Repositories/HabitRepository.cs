@@ -1,4 +1,5 @@
 using HabitTracker.Domain.Entities;
+using HabitTracker.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 public class HabitRepository : IHabitRepository
 {

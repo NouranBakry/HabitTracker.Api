@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using HabitTracker.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Controllers
 builder.Services.AddControllers();
+builder.Services.AddOpenApi(); 
 
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -15,13 +17,14 @@ builder.Services.AddScoped<CreateHabitHandler>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi(); 
+}
 
+app.UseHttpsRedirection();
 app.MapControllers();
-
 app.Run();

@@ -1,3 +1,5 @@
+namespace HabitTracker.Infrastructure;
+
 using HabitTracker.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 public class AppDbContext : DbContext

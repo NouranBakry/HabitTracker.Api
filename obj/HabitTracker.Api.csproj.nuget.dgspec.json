@@ -46,7 +46,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[10.0.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -76,9 +76,9 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[10.1.3, )"
+              "version": "[2.12.41, )"
             }
           },
           "imports": [
