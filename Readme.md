@@ -43,7 +43,7 @@ Track habit frequency (Daily / Weekly)
 
 Associate habits with specific users
 
--  Habit Tracking
+- Habit Tracking
 
 Mark habits as completed
 
