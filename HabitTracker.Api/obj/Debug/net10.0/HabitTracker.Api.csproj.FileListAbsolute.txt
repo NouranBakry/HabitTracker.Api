@@ -1,0 +1,9 @@
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.csproj.AssemblyReference.cache
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.AssemblyInfoInputs.cache
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.AssemblyInfo.cs
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.csproj.CoreCompileInputs.cache
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.MvcApplicationPartsAssemblyInfo.cs
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.sourcelink.json

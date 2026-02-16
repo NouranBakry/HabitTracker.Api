@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "WQuHXlZt6GQ=",
-  "success": false,
+  "dgSpecHash": "8oNBfnXkXBo=",
+  "success": true,
   "projectFilePath": "/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api.csproj",
   "expectedPackageFiles": [
     "/Users/nouranbakry/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
@@ -19,9 +19,9 @@
     "/Users/nouranbakry/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/5.0.0/microsoft.codeanalysis.workspaces.msbuild.5.0.0.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/microsoft.data.sqlclient/6.1.1/microsoft.data.sqlclient.6.1.1.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
-    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore/10.0.2/microsoft.entityframeworkcore.10.0.2.nupkg.sha512",
-    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.2/microsoft.entityframeworkcore.abstractions.10.0.2.nupkg.sha512",
-    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.2/microsoft.entityframeworkcore.analyzers.10.0.2.nupkg.sha512",
+    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore/10.0.3/microsoft.entityframeworkcore.10.0.3.nupkg.sha512",
+    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.3/microsoft.entityframeworkcore.abstractions.10.0.3.nupkg.sha512",
+    "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.3/microsoft.entityframeworkcore.analyzers.10.0.3.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.design/10.0.3/microsoft.entityframeworkcore.design.10.0.3.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.3/microsoft.entityframeworkcore.relational.10.0.3.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/microsoft.entityframeworkcore.sqlserver/10.0.2/microsoft.entityframeworkcore.sqlserver.10.0.2.nupkg.sha512",
@@ -61,17 +61,5 @@
     "/Users/nouranbakry/.nuget/packages/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "/Users/nouranbakry/.nuget/packages/system.security.cryptography.protecteddata/9.0.4/system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.EntityFrameworkCore from 10.0.3 to 10.0.2. Reference the package directly from the project to select a different version. \n HabitTracker.Api -> Microsoft.EntityFrameworkCore.Design 10.0.3 -> Microsoft.EntityFrameworkCore.Relational 10.0.3 -> Microsoft.EntityFrameworkCore (>= 10.0.3) \n HabitTracker.Api -> Microsoft.EntityFrameworkCore (>= 10.0.2)",
-      "projectPath": "/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api.csproj",
-      "filePath": "/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api.csproj",
-      "libraryId": "Microsoft.EntityFrameworkCore",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }
