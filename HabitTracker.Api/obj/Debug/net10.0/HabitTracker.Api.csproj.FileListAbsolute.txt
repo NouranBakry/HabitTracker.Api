@@ -165,3 +165,4 @@
 /Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.pdb
 /Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/HabitTracker.Api.genruntimeconfig.cache
 /Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/obj/Debug/net10.0/ref/HabitTracker.Api.dll
+/Users/nouranbakry/Desktop/HabitTracker.Api/HabitTracker.Api/bin/Debug/net10.0/Scalar.AspNetCore.dll

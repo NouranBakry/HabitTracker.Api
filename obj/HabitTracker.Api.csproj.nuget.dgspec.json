@@ -78,7 +78,7 @@
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.12.41, )"
+              "version": "[2.12.46, )"
             }
           },
           "imports": [
