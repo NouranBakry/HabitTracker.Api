@@ -7,5 +7,14 @@ public class HabitEntry
     public bool Completed { get; set; }
 
     public Guid HabitId { get; set; }
-    public Habit Habit { get; set; } = null!;
+
+    private HabitEntry() { }
+
+    public HabitEntry(Guid habitId, DateTime date, bool completed)
+    {
+        Id = Guid.NewGuid();
+        HabitId = habitId;
+        Date = date.Date; // Store only the date part
+        Completed = completed;
+    }
 }
