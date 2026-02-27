@@ -6,11 +6,25 @@ var builder = WebApplication.CreateBuilder(args);
 
 // 1. Register Services
 builder.Services.AddControllers();
-builder.Services.AddOpenApi(); 
+builder.Services.AddOpenApi();
 
 // 2. Database (PostgreSQL)
+// 1. Try to get it from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("Default");
+
+// 2. FALLBACK: If it's null, use the hardcoded string (matching your migrations)
+if (string.IsNullOrEmpty(connectionString))
+{
+    Console.WriteLine("⚠️ WARNING: Could not find 'Default' in appsettings.json. Using fallback.");
+    connectionString = "Host=localhost;Port=5432;Database=HabitTrackerDb;Username=postgres;Password=postgres";
+}
+else
+{
+    Console.WriteLine($"✅ Database Connection String loaded successfully.");
+}
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    options.UseNpgsql(connectionString));
 
 // 3. Dependency Injection
 builder.Services.AddScoped<IHabitRepository, HabitRepository>();
