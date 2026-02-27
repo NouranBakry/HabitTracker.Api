@@ -1,10 +1,15 @@
-/bin
-/obj
-/.vs
-/*.user
-/HabitTracker.Api/bin
-/HabitTracker.Api/obj
-/HabitTracker.Infrastructure/bin
-/HabitTracker.Infrastructure/obj
-/HabitTracker.Domain/bin
-/HabitTracker.Domain/obj
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# User secrets & Environment
+appsettings.Development.json
+.env
