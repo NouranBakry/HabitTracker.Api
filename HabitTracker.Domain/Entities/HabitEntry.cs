@@ -8,6 +8,8 @@ public class HabitEntry
 
     public Guid HabitId { get; set; }
 
+    public Habit Habit { get; set; } = null!; // Navigation property
+
     private HabitEntry() { }
 
     public HabitEntry(Guid habitId, DateTime date, bool completed)
@@ -18,3 +20,4 @@ public class HabitEntry
         Completed = completed;
     }
 }
+
