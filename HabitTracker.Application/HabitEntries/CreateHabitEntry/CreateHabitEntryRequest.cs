@@ -1,0 +1,1 @@
+public record CreateHabitEntryRequest(DateTime? Date, bool Completed = true);

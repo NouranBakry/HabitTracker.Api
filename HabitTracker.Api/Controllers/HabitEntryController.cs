@@ -1,27 +1,30 @@
+using HabitTracker.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("/habits")]
+[Route("api/habits/{habitId}/entries")]
 public class HabitEntryController : ControllerBase
 {
-    private readonly CreateHabitEntryHandler _handler;
-
-    public HabitEntryController(CreateHabitEntryHandler handler)
+    private readonly CreateHabitEntryHandler _createHandler;
+    private readonly GetHabitEntriesHandler _getHandler;
+    public HabitEntryController(CreateHabitEntryHandler createHandler, GetHabitEntriesHandler getHandler)
     {
-        _handler = handler;
+        _createHandler = createHandler;
+        _getHandler = getHandler;
     }
 
 
-    [HttpPost("{habitId}/entries")]
-    public async Task<IActionResult> CreateEntry(Guid habitId, CreateHabitEntryCommand command)
+    [HttpPost]
+    public async Task<IActionResult> CreateEntry(Guid habitId, [FromBody] CreateHabitEntryRequest request)
     {
-        var id = await _handler.Handle(command);
-        return CreatedAtAction(nameof(GetById), new { habitId, id }, null);
+        var id = await _createHandler.Handle(new CreateHabitEntryCommand(habitId, request.Date, request.Completed));
+        return Ok(id);
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    [HttpGet]
+    public async Task<IActionResult> GetEntries(Guid habitId)
     {
-        return Ok(); // implement later
+        var entries = await _getHandler.Handle(new GetHabitEntriesQuery(habitId));
+        return Ok(entries);
     }
 }

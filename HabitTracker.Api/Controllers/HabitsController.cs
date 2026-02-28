@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("/habits")]
+[Route("api/habits")]
 public class HabitsController : ControllerBase
 {
     private readonly CreateHabitHandler _handler;
@@ -18,7 +18,7 @@ public class HabitsController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id }, null);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("api/habits/{id}")]
     public async Task<IActionResult> GetById(Guid id, [FromServices] GetHabitHandler handler)
     {
         var habit = await handler.Handle(new GetHabitQuery(id));
