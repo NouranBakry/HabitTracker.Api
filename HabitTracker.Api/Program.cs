@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using HabitTracker.Infrastructure;
-using Scalar.AspNetCore; 
+using Scalar.AspNetCore;
+using HabitTracker.Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // 3. Dependency Injection
 builder.Services.AddScoped<IHabitRepository, HabitRepository>();
-builder.Services.AddScoped<IHabitEntryRepository, HabitEntryRepository>();
 builder.Services.AddScoped<CreateHabitHandler>();
 builder.Services.AddScoped<GetHabitHandler>();
 builder.Services.AddScoped<GetAllHabitsHandler>();

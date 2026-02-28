@@ -1,8 +1,16 @@
 using HabitTracker.Domain.Entities;
 
+namespace HabitTracker.Domain.Interfaces;
+
 public interface IHabitRepository
 {
-    Task AddAsync(Habit habit);
+    // Habit Methods
+    Task<IEnumerable<Habit>> GetAllAsync();
     Task<Habit?> GetByIdAsync(Guid id);
-    Task<List<Habit>> GetAllAsync();
+    Task AddAsync(Habit habit);
+    Task UpdateAsync(Habit habit);
+    Task DeleteAsync(Guid id);
+
+    Task AddEntryAsync(HabitEntry entry);
+    Task<IEnumerable<HabitEntry>> GetEntriesByHabitIdAsync(Guid habitId);
 }

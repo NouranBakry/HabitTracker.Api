@@ -1,4 +1,5 @@
 using HabitTracker.Domain.Entities;
+using HabitTracker.Domain.Interfaces;
 public class CreateHabitHandler
 {
     private readonly IHabitRepository _repository;

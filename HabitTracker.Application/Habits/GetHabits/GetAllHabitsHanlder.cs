@@ -1,3 +1,5 @@
+using HabitTracker.Domain.Interfaces;
+
 public class GetAllHabitsHandler
 {
     private readonly IHabitRepository _repository;

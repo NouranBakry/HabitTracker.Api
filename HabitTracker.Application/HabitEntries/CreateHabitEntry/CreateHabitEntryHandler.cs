@@ -1,17 +1,17 @@
-using HabitTracker.Infrastructure;
 using HabitTracker.Domain.Entities;
+using HabitTracker.Domain.Interfaces;
 
 public class CreateHabitEntryHandler
 {
-    private readonly AppDbContext _context;
+    private readonly IHabitRepository repository;
 
-    public CreateHabitEntryHandler(AppDbContext context)
+    public CreateHabitEntryHandler(IHabitRepository repository)
     {
-        _context = context;
+        this.repository = repository;
     }
     public async Task<Guid> Handle(CreateHabitEntryCommand command)
     {
-        var habit = await _context.Habits.FindAsync(command.HabitId);
+        var habit = await repository.GetByIdAsync(command.HabitId);
         if (habit == null) throw new Exception("Habit not found");
 
         // 2. Create the entry
@@ -21,8 +21,7 @@ public class CreateHabitEntryHandler
             command.Completed
         );
 
-        _context.HabitEntries.Add(entry);
-        await _context.SaveChangesAsync();
+        await repository.AddEntryAsync(entry);
 
         return entry.Id;
     }
