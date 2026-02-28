@@ -1,20 +1,16 @@
-using HabitTracker.Infrastructure;
-using Microsoft.EntityFrameworkCore;
+using HabitTracker.Domain.Interfaces;
 public class GetHabitEntriesHandler
 {
-    private readonly AppDbContext _context;
+    private readonly IHabitRepository _repository;
 
-    public GetHabitEntriesHandler(AppDbContext context)
+    public GetHabitEntriesHandler(IHabitRepository repository)
     {
-        _context = context;
+        _repository = repository;
     }
 
     public async Task<List<HabitEntryResponse>> Handle(GetHabitEntriesQuery query)
     {
-        return await _context.HabitEntries
-            .Where(e => e.HabitId == query.HabitId)
-            .OrderByDescending(e => e.Date)
-            .Select(e => new HabitEntryResponse(e.Id, e.Date, e.Completed))
-            .ToListAsync();
+        var entries = await _repository.GetEntriesByHabitIdAsync(query.HabitId);
+        return entries.Select(e => new HabitEntryResponse(e.Id, e.Date, e.Completed)).ToList();
     }
 }

@@ -6,7 +6,7 @@ public class Habit
     public string Name { get; set; }
     public DateTime CreatedAt { get; set; }
     public ICollection<HabitEntry> Entries { get; set; } = new List<HabitEntry>();
-    private Habit() { }
+    private Habit() { Name = null!; }
 
     public Habit(string name)
     {
