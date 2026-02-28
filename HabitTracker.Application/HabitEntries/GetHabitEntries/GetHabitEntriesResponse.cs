@@ -1,0 +1,1 @@
+public record HabitEntryResponse(Guid Id, DateTime Date, bool Completed);

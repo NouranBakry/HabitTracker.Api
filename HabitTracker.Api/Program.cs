@@ -28,7 +28,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // 3. Dependency Injection
 builder.Services.AddScoped<IHabitRepository, HabitRepository>();
+builder.Services.AddScoped<IHabitEntryRepository, HabitEntryRepository>();
 builder.Services.AddScoped<CreateHabitHandler>();
+builder.Services.AddScoped<GetHabitHandler>();
+builder.Services.AddScoped<GetAllHabitsHandler>();
 
 var app = builder.Build();
 

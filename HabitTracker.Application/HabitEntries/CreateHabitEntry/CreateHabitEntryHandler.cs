@@ -1,18 +1,29 @@
+using HabitTracker.Infrastructure;
 using HabitTracker.Domain.Entities;
 
 public class CreateHabitEntryHandler
 {
-    private readonly IHabitEntryRepository _repository;
+    private readonly AppDbContext _context;
 
-    public CreateHabitEntryHandler(IHabitEntryRepository repository)
+    public CreateHabitEntryHandler(AppDbContext context)
     {
-        _repository = repository;
+        _context = context;
     }
-
     public async Task<Guid> Handle(CreateHabitEntryCommand command)
     {
-        var entry = new HabitEntry(command.HabitId, command.Date, command.Completed);
-        await _repository.AddAsync(entry);
+        var habit = await _context.Habits.FindAsync(command.HabitId);
+        if (habit == null) throw new Exception("Habit not found");
+
+        // 2. Create the entry
+        var entry = new HabitEntry(
+            command.HabitId,
+            command.Date ?? DateTime.UtcNow,
+            command.Completed
+        );
+
+        _context.HabitEntries.Add(entry);
+        await _context.SaveChangesAsync();
+
         return entry.Id;
     }
 }

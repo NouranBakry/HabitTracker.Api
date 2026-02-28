@@ -1,0 +1,1 @@
+public record GetHabitEntriesQuery(Guid HabitId);
