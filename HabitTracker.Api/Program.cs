@@ -32,14 +32,16 @@ builder.Services.AddScoped<IHabitRepository, HabitRepository>();
 builder.Services.AddScoped<CreateHabitHandler>();
 builder.Services.AddScoped<GetHabitHandler>();
 builder.Services.AddScoped<GetAllHabitsHandler>();
+builder.Services.AddScoped<CreateHabitEntryHandler>();
+builder.Services.AddScoped<GetHabitEntriesHandler>();
 
 var app = builder.Build();
 
 // 4. Configure the HTTP Request Pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();          
-    app.MapScalarApiReference(); 
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
