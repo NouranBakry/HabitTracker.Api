@@ -19,8 +19,10 @@ public class HabitsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    public async Task<IActionResult> GetById(Guid id, [FromServices] GetHabitHandler handler)
     {
-        return Ok(); // implement later
+        var habit = await handler.Handle(new GetHabitQuery(id));
+        if (habit == null) return NotFound();
+        return Ok(habit);
     }
 }
