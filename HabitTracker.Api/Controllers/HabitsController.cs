@@ -25,4 +25,11 @@ public class HabitsController : ControllerBase
         if (habit == null) return NotFound();
         return Ok(habit);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll([FromServices] GetAllHabitsHandler handler)
+    {
+        var habits = await handler.Handle(new GetAllHabitsQuery());
+        return Ok(habits);
+    }
 }
